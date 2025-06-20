@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #F7F7F7;
+  --foreground: #171717;
+}
+
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #F7F7F7;
+    --foreground: #ededed;
+  }
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* font-family: Arial, Helvetica, sans-serif; */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  
+}
+
+
+*{
+  scroll-behavior: smooth;
+}
+
+/* 
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+
+.no-scrollbar {
+  overflow: auto;
+} */
+
+
+
+@font-face {
+  font-family: 'LinikSans';
+  src: url('/fonts/LinikSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LinikSans';
+  src: url('/fonts/LinikSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'LinikSans', sans-serif; /* Add fallback fonts if needed */
+  font-weight: 700; /* Normal */
+  font-style: normal;
+}
+
+p, span, a, li, Link, button {
+  font-family: 'LinikSans', sans-serif; /* Add fallback fonts if needed */
+  font-weight: 400; /* Normal */
+  font-style: normal;
+}
+
+
+/* Remove all possible spacing sources */
+.splide__slide {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.splide__list {
+  gap: 0 !important; /* Removes spacing between flex items */
+}
+
+.splide__track {
+  padding: 0 !important;
+}
+
+/* Ensures images have no extra space */
+.splide__slide img {
+  display: block; /* Avoids extra inline space caused by inline-block */
+  margin: 0;
+  padding: 0;
+}
