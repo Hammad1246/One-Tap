@@ -18,13 +18,13 @@ function Hero() {
         />
       </div>
 
-      <div className="absolute top-[221px] w-[55%] space-y-5  left-[64px] text-start text-white">
+      <div className="absolute top-[221px] w-[58%] space-y-5  left-[64px] text-start text-white">
         <h1 className="text-6xl font-bold  leading-tight">
           Digital business cards for modern networking.
         </h1>
 
         <p className="mb-10 text-xl">Share instantly. Stay connected.</p>
-        <button className="bg-[#F7F7F7] rounded-lg h-[41px] w-[120px] text-black">
+        <button className="bg-[#F7F7F7] rounded-lg h-[41px] w-[120px] text-black hover:bg-white cursor-pointer" >
           Get Started
         </button>
       </div>

@@ -17,7 +17,7 @@ function Brands() {
   useEffect(() => {
     const splide = new Splide(".splide", {
       type: "loop",
-      drag: "free",
+      drag: false,
       focus: "center",
       perPage: 5,
       gap: 0, // Ensures no spacing between slides
@@ -27,6 +27,7 @@ function Brands() {
       pagination: false,
       autoScroll: {
         speed: 1,
+         pauseOnHover: false
       },
     });
 
@@ -34,8 +35,8 @@ function Brands() {
   }, []);
 
   return (
-    <section className="h-auto flex justify-center items-center w-full">
-      <div className="w-[90%] h-full">
+    <section className="h-auto w-[90vw] mx-auto flex justify-center items-center  bg-[#F7F7F7]">
+      <div className=" h-full w-full">
         <div className="splide">
           <div className="splide__track">
             <ul className="splide__list">
