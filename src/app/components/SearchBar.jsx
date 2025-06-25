@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SearchBar = () => {
   return (
-    <div className="flex items-center w-[45%] mb-8  rounded-lg">
+    <div className="flex items-center w-[48%] mb-8  rounded-lg">
       {/* Search Input */}
       <div className="flex-1 relative">
         <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#515154] w-5 h-12" />

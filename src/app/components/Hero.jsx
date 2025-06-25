@@ -8,7 +8,7 @@ function Hero() {
       aria-label="Hero banner"
       style={{ backgroundImage: `url('/images/Hero.png')` }}
     >
-      <div className="absolute top-[32px] left-[64px] rounded-2xl h-16 w-auto bg-[#F7F7F7]/70 backdrop-blur-md">
+      <div className="absolute top-[30px] left-[64px] rounded-2xl h-16 w-auto bg-[#F7F7F7]/70 backdrop-blur-md">
         <Image
           src="/images/logo.png"
           alt="Logo"

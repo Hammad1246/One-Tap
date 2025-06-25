@@ -107,3 +107,15 @@ p, span, a, li, Link, button {
 
 
 
+input[type="password"]::-ms-reveal, 
+input[type="password"]::-ms-clear, 
+input[type="password"]::-webkit-clear-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-reveal-button {
+    display: none;
+}
+
+/* For Firefox */
+input[type="password"]::-moz-clear {
+    display: none;
+}

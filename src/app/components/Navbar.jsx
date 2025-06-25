@@ -3,47 +3,36 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MdArrowDropDown } from "react-icons/md";
+import Image from "next/image";
+import { FiShoppingCart } from "react-icons/fi";
+import { useCart } from "../context/cartContext";
 
 function Navbar() {
-  const [shopOpen, setShopOpen] = useState(false);
-  const [contactOpen, setContactOpen] = useState(false);
 
-  const shopRef = useRef(null);
-  const contactRef = useRef(null);
-  const pathname = usePathname();
+   const { dispatch } = useCart();
 
-  const handleClickOutside = (event) => {
-    if (shopRef.current && !shopRef.current.contains(event.target)) {
-      setShopOpen(false);
-    }
-    if (contactRef.current && !contactRef.current.contains(event.target)) {
-      setContactOpen(false);
-    }
+     const addToCart = () => {
+    dispatch({ type: "TOGGLE_CART" });
   };
 
-  useEffect(() => {
-    document.addEventListener("click", handleClickOutside);
-
-    // Close dropdowns on route change
-    setShopOpen(false);
-    setContactOpen(false);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [pathname]);
-
-  const toggleShopDropdown = () => setShopOpen((prev) => !prev);
-  const toggleContactDropdown = () => setContactOpen((prev) => !prev);
-
   return (
-    <nav className="flex absolute top-10 justify-end h-auto w-full gap-7 text-black">
+    <nav className="flex absolute top-10 justify-end h-auto w-full gap-7  text-black">
+      <div className="absolute top-[-10px] left-[64px] rounded-2xl h-16 w-auto bg-[#F7F7F7]/70 backdrop-blur-md">
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          width={128}
+          height={66}
+          className="h-20 w-28 pr-2 pb-5 px-1 object-contain"
+        />
+      </div>
+
       <div className="h-[42px] w-auto px-10 bg-white rounded-xl shadow">
         <ul className="flex justify-evenly items-center h-full w-full space-x-10">
           <li>
             <Link href="/">Home</Link>
           </li>
-          <li className="relative" ref={shopRef}>
+          {/* <li className="relative" ref={shopRef}>
             <button
               onClick={toggleShopDropdown}
               className="inline-flex w-full justify-center gap-x-1 px-3 py-2 text-sm text-gray-900 cursor-pointer"
@@ -68,11 +57,14 @@ function Navbar() {
                 </ul>
               </div>
             )}
+          </li> */}
+          <li>
+            <Link href="/shop">Shop</Link>
           </li>
           <li>
-            <Link href="/">FAQ</Link>
+            <Link href="/FAQ">FAQ</Link>
           </li>
-          <li className="relative" ref={contactRef}>
+          {/* <li className="relative" ref={contactRef}>
             <button
               onClick={toggleContactDropdown}
               className="inline-flex w-full justify-center gap-x-1 px-3 py-2 text-sm text-gray-900 cursor-pointer"
@@ -105,11 +97,15 @@ function Navbar() {
                 </ul>
               </div>
             )}
+          </li> */}
+          <li>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>
 
-      <div className="h-[42px] w-auto px-3 bg-white shadow rounded-xl flex justify-between items-center mr-20">
+      {/* this appear when user login*/}
+      {/* <div className="h-[42px] w-auto px-3 bg-white shadow rounded-xl flex justify-between items-center mr-20">
         <Link href="#">
           <h6 className="text-[#007BFF] pr-5">Upgrade</h6>
         </Link>
@@ -123,6 +119,29 @@ function Navbar() {
         </div>
 
         <div className="h-[32px] w-[32px] bg-[#007BFF] rounded-md ml-5"></div>
+      </div> */}
+
+      <div className="flex">
+        <div className="h-[42px] w-auto px-3 bg-white shadow rounded-xl flex justify-between items-center gap-2 mr-5">
+          <Link href= "/login">
+           <button className="w-auto h-auto p-1.5 px-3 rounded-xl text-black text-sm cursor-pointer">
+            <p>Log in</p>
+          </button>
+          </Link>
+         
+          <Link href= "/signup">
+           <button className="w-auto h-auto p-1.5 px-3 rounded-xl text-white text-sm bg-black cursor-pointer">
+            <p>Sign up</p>
+          </button>
+          </Link>
+         
+        </div>
+
+        <button
+        onClick={addToCart}
+         className="h-[42px] w-auto px-3 bg-white shadow rounded-xl flex justify-between items-center gap-2 mr-20 cursor-pointer ">
+          <FiShoppingCart className="h-5 w-5" />
+        </button>
       </div>
     </nav>
   );

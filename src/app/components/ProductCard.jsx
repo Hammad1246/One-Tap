@@ -1,8 +1,34 @@
 "use client"
 import { useState } from "react";
+import Link from "next/link";
+import { useCart } from "../context/cartContext";
 
-const ProductCard = ({ title, description, price, originalPrice, image }) => {
+
+
+
+const ProductCard = ({ title, description, price, originalPrice, image, productId }) => {
+
+  const {dispatch} = useCart()
   const [isFavorited, setIsFavorited] = useState(false);
+
+
+    const product = {
+    id: productId,
+    title: title,
+    description: description,
+    price: price,
+    originalPrice: originalPrice,
+    image: "/images/Hero.png",
+     thumbnails: ["/images/Hero.png", "/images/Hero.png", "/images/Hero.png"],
+  };
+
+    
+  const addToCart = () => {
+    dispatch({ type: "ADD_TO_CART", payload: product });
+    dispatch({ type: "TOGGLE_CART" });
+  };
+
+
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
@@ -38,11 +64,13 @@ const ProductCard = ({ title, description, price, originalPrice, image }) => {
       </div>
 
       {/* Product Image */}
+       <Link href={`/shop/${productId}`}>
       <div className="px-4 pb-4">
         <div className="w-full h-48 bg-[#FFB7B7] rounded-lg">
           <div className="w-full h-full bg-pink-200/50 rounded-lg"></div>
         </div>
       </div>
+      </Link>
 
       {/* Price and Add to Cart */}
       <div className="flex items-center justify-between p-4 pt-0">
@@ -59,7 +87,9 @@ const ProductCard = ({ title, description, price, originalPrice, image }) => {
           )}
         </div>
 
-        <button className="px-4 py-3 text-white text-sm font-medium bg-[#007BFF] rounded-lg hover:bg-blue-600">
+        <button
+        onClick={addToCart}
+         className="px-4 py-3 text-white text-sm font-medium bg-[#007BFF] rounded-lg hover:bg-blue-600">
           Add to Cart
         </button>
       </div>
