@@ -1,15 +1,17 @@
 "use client";
 import { useState } from "react";
 
-const Sidebar = () => {
-  const [priceRange, setPriceRange] = useState(100);
-  const [selectedTypes, setSelectedTypes] = useState([]);
-
+const Sidebar = ({
+  selectedTypes,
+  setSelectedTypes,
+  priceRange,
+  setPriceRange,
+  onApplyFilters,
+}) => {
   const typeOptions = [
-    { id: "1", label: "No.1", count: 10 },
-    { id: "2", label: "No.2", count: 12 },
-    { id: "3", label: "No.3", count: 16 },
-    { id: "4", label: "No.4", count: 20 },
+    { id: "physical", label: "Physical", count: 10 },
+    { id: "QR Card", label: "QR Card", count: 12 },
+    { id: "NFT", label: "NFT", count: 16 },
   ];
 
   const handleTypeChange = (typeId) => {
@@ -21,12 +23,11 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-64 bg-white rounded-r-2xl  h-[82vh] fixed left-0 bottom-0  overflow-hidden">
-
+    <div className="w-64 bg-white rounded-r-2xl h-[82vh] fixed left-0 bottom-0 overflow-hidden">
       <div className="p-6 h-full flex flex-col">
         {/* Type Filter */}
         <div className="mb-20">
-          <p className="text-xs  text-[#515154CC] mb-4 uppercase tracking-widest">
+          <p className="text-xs text-[#515154CC] mb-4 uppercase tracking-widest">
             TYPE
           </p>
           <div className="space-y-3">
@@ -44,7 +45,9 @@ const Sidebar = () => {
                   className="text-sm text-[#515154] !font-bold cursor-pointer flex-1 "
                 >
                   {option.label}{" "}
-                  <span className="text-[#515154CC] !font-samibold">({option.count})</span>
+                  <span className="text-[#515154CC] !font-samibold">
+                    ({option.count})
+                  </span>
                 </label>
               </div>
             ))}
@@ -53,7 +56,7 @@ const Sidebar = () => {
 
         {/* Price Filter */}
         <div className="mb-8">
-          <p className="text-xs tracking-widest  text-[#515154CC] mb-4 uppercase ">
+          <p className="text-xs tracking-widest text-[#515154CC] mb-4 uppercase ">
             PRICE
           </p>
           <div className="space-y-4">
@@ -65,12 +68,17 @@ const Sidebar = () => {
               step={1}
               className="w-full accent-[#007BFF] "
             />
-            <div className="text-sm text-[#515154] !font-semibold ">Max. ${priceRange}.00</div>
+            <div className="text-sm text-[#515154] !font-semibold ">
+              Max. ${priceRange}.00
+            </div>
           </div>
         </div>
 
         {/* Apply Filters Button */}
-        <button className="w-[70%] mx-auto bg-[#007BFF] text-white text-sm font-medium py-2 rounded-md hover:bg-blue-600 mt-5">
+        <button
+          className="w-[70%] mx-auto bg-[#007BFF] text-white text-sm font-medium py-2 rounded-md hover:bg-blue-600 mt-5"
+          onClick={onApplyFilters}
+        >
           + Apply filters
         </button>
       </div>

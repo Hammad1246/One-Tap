@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useCart } from "../context/cartContext";
+import Image from "next/image";
 
 
 
@@ -18,8 +19,8 @@ const ProductCard = ({ title, description, price, originalPrice, image, productI
     description: description,
     price: price,
     originalPrice: originalPrice,
-    image: "/images/Hero.png",
-     thumbnails: ["/images/Hero.png", "/images/Hero.png", "/images/Hero.png"],
+    image: image || "/images/physicalCard2.jpg",
+    // thumbnails: ["/images/physicalCard1.jpg", "/images/qr1.png", "/images/nfc1.jpg"],
   };
 
     
@@ -66,8 +67,14 @@ const ProductCard = ({ title, description, price, originalPrice, image, productI
       {/* Product Image */}
        <Link href={`/shop/${productId}`}>
       <div className="px-4 pb-4">
-        <div className="w-full h-48 bg-[#FFB7B7] rounded-lg">
-          <div className="w-full h-full bg-pink-200/50 rounded-lg"></div>
+        <div className="w-full h-48 bg-white rounded-lg">
+          <Image
+            src={image}
+            alt={title}
+            width={200}
+            height={200}
+            className="w-full h-full object-cover rounded-lg"
+           />
         </div>
       </div>
       </Link>

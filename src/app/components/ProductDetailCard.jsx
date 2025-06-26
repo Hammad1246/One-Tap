@@ -10,11 +10,11 @@ const ProductDetailCard = () => {
   const product = {
     id: "1",
     title: "Card A",
-    description: "A great card for all your needs.",
+    description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
     price: 37,
     originalPrice: 60,
-    image: "/images/Hero.png",
-     thumbnails: ["/images/Hero.png", "/images/Hero.png", "/images/Hero.png"],
+    image: "/images/physicalCard2.jpg",
+     thumbnails: ["/images/physicalCard1.jpg", "/images/qr1.png", "/images/nfc1.jpg"],
   };
 
   

@@ -7,9 +7,7 @@ const ProductSection = ({ title, products }) => {
       {/* Section Header */}
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-base  text-[#515154CC]">{title}</h2>
-        <button className="text-[#007BFF] hover:text-blue-700 text-base !font-semibold cursor-pointer">
-          View All
-        </button>
+
       </div>
 
       {/* Product Grid */}
@@ -23,6 +21,7 @@ const ProductSection = ({ title, products }) => {
             description={product.description}
             price={product.price}
             originalPrice={product.originalPrice}
+            image={product.image}
           />
         ))}
       </div>

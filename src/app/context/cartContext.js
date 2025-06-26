@@ -3,6 +3,8 @@ import React, { createContext, useReducer, useContext, useEffect } from "react";
 
 const CartContext = createContext();
 
+const initialState = { items: [], isOpen: false };
+
 const cartReducer = (state, action) => {
     switch (action.type) {
         case "ADD_TO_CART":
@@ -36,7 +38,7 @@ const cartReducer = (state, action) => {
     }
 };
 
-const initialState = { items: [], isOpen: false };
+
 
 export const CartProvider = ({ children }) => {
     // Load from localStorage if available
