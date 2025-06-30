@@ -9,8 +9,8 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
    const [rememberMe, setRememberMe] = useState(false);
    const [userData, setUserData] = useState({
-    email: "hammadsaleem1246@gmail.com",
-    password: "12345678"
+    email: "",
+    password: ""
    });
   const router = useRouter();
 
@@ -29,7 +29,7 @@ export default function LoginPage() {
     backgroundRepeat: "no-repeat",
   }}
     >
-      <div className="flex justify-center items-center flex-col w-[100%]  gap-10 ">
+      <div className="flex justify-center items-center flex-col md:w-[100%] w-[90%]  gap-10 ">
         <div className="text-center text-white ">
           <h1 className="text-4xl !font-bold mb-2">Log In</h1>
           <p className="text-lg">Enter your email and password to log in</p>
@@ -41,7 +41,6 @@ export default function LoginPage() {
               type="email"
               placeholder="Demo@gmail.com"
               className="w-full px-4 py-3 rounded-md bg-[#F7F7F7]  text-black outline-none"
-              required
               value={userData.email}
               onChange={(e) => setUserData({ ...userData, email: e.target.value })}
             />
@@ -51,7 +50,6 @@ export default function LoginPage() {
                 type={showPassword ? "text" : "password"}
                 placeholder="Password"
                 className="w-full px-10 py-3 rounded-md bg-[#F7F7F7]  text-black outline-none"
-                required
                 value={userData.password}
                 onChange={(e) => setUserData({ ...userData, password: e.target.value })}
               />

@@ -14,13 +14,13 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="flex min-h-screen h-auto flex-col md:flex-row items-center justify-between gap-10 px-4 md:px-16 py-12 bg-[#F7F7F7] text-black pt-28">
+    <div className="flex md:min-h-screen h-auto w-screen flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-16  bg-[#F7F7F7] text-black pt-36 md:pt-10">
         
-      <div className="md:w-1/2">
-        <p className="text-base mb-4">
+      <div className="md:w-1/2 w-full">
+        <p className="text-base mb-4 text-center md:text-left">
           Everything You Need To Know
         </p>
-        <div className="space-y-4">
+        <div className="space-y-4 ">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} defaultOpen={index === faqs.length - 1} />
           ))}

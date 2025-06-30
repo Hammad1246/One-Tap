@@ -14,12 +14,12 @@ export default function CardSummary() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="h-[600px] bg-gradient-to-b from-[#F7F7F7] to-[#91a5ff] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+    <div className="h-auto md:py-12 py-5 bg-gradient-to-b from-[#F7F7F7] to-[#91a5ff] flex flex-col md:flex-row-reverse lg:flex-row items-center justify-center gap-8 lg:gap-16">
       {/* Left Side - Card Display */}
       <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6 order-2 lg:order-1">
         {/* Card */}
         <div
-          className={`w-[240px] h-[330px] md:w-[300px] md:h-[410px] rounded-xl shadow-lg px-4 py-2 relative ${cards[activeIndex].color}`}
+          className={`w-[240px] h-[300px] md:w-[300px] md:h-[410px] rounded-xl shadow-lg px-4 py-2 relative ${cards[activeIndex].color}`}
         >
           <p className="text-xs text-black">{cards[activeIndex].title}</p>
         </div>
@@ -39,7 +39,7 @@ export default function CardSummary() {
       </div>
 
       {/* Right Side - Content */}
-      <div className="flex flex-col justify-start lg:justify-evenly items-start h-auto lg:h-[400px] order-1 lg:order-2 max-w-md lg:max-w-none">
+      <div className="flex flex-col justify-start px-5 md:px-0 lg:justify-evenly items-start h-auto lg:h-[400px] order-1 lg:order-2 max-w-md lg:max-w-none">
         <div className="mb-4 lg:mb-0">
           <h2 className="text-2xl md:text-3xl font-bold text-black">
             {cards[activeIndex].title}

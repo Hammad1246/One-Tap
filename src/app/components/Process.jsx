@@ -51,7 +51,7 @@ function Process() {
   ];
 
   return (
-    <section className="min-h-screen  w-[90vw] md:w-[80vw] mx-auto flex flex-col items-center justify-center text-[#1B1919]">
+    <section className="md:h-[560px] h-auto  w-[90vw] md:w-[80vw] mx-auto flex flex-col items-center justify-center text-[#1B1919]">
       <div className="h-auto w-full md:w-[80%] lg:w-[50%] text-center px-4 md:px-0">
         <h2 className="text-3xl md:text-4xl mb-3 md:mb-4">Learn More About Process</h2>
         <p className="text-sm text-[#515154] w-full md:w-[90%] mx-auto leading-6 md:leading-7">
@@ -59,11 +59,11 @@ function Process() {
           commodo ligula eget dolor. Aenean massa.
         </p>
       </div>
-      <div className="h-auto w-full flex items-center justify-between mt-8 md:mt-10 px-4 md:px-0">
+      <div className="h-auto w-full flex items-center justify-between mt-8 md:mt-10 ">
         <div className="flex flex-col items-center w-full relative">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {processSteps.map((step, index) => (
-              <div key={step.stepOrder} className="text-center group relative">
+              <div key={step.stepOrder} className="md:text-center text-left group relative flex md:flex-col gap-2 md:gap-0">
                 {/* Dashed Curved Line - Hidden on mobile */}
                 {index < 2 && (
                   <div className="hidden md:block absolute top-1/2 pt-5 left-2/3 transform translate-x-10 -translate-y-10 md:-translate-y-20 w-40">
@@ -78,7 +78,7 @@ function Process() {
                 )}
 
                 {/* Step Number */}
-                <div className="text-left pl-8 md:pl-20">
+                <div className=" hidden md:flex text-left pl-8 md:pl-20">
                   <span
                     className={`flex items-center justify-center w-8 h-8 md:w-10 md:h-10 text-base md:text-lg font-bold rounded-full
                       ${index === 0 ? "bg-white" : "bg-transparent"}`}

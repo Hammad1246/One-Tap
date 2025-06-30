@@ -24,7 +24,7 @@ export default function ForgotPasswordPage() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="flex justify-center items-center flex-col w-[100%] gap-10">
+      <div className="flex justify-center items-center flex-col md:w-[100%] w-[90%] gap-10">
         <div className="text-center text-white">
           <h1 className="text-4xl !font-bold mb-2">Forgot Password</h1>
           <p className="text-lg">

@@ -37,16 +37,16 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="min-h-[550px] md:h-[550px] w-screen bg-[#E8E8E8] flex justify-center items-center py-10 md:py-0">
-      <div className="w-[90%] md:w-[80%] h-full md:h-[80%] space-y-10 md:space-y-0 md:space-x-10 flex flex-col md:flex-row">
+    <footer className="min-h-[550px] md:h-[550px] w-screen bg-[#E8E8E8] flex justify-center items-center pt-10 md:pt-0 mt-10">
+      <div className="w-[80%] h-full md:h-[80%] space-y-10 md:space-y-0 md:space-x-10 flex flex-col md:flex-row">
         <div className="w-full md:w-[35%] h-full flex flex-col justify-between items-start space-y-8 md:space-y-0">
-          <div className="w-[160px] h-[80px] bg-[#F7F7F7] rounded-xl">
+          <div className="w-[160px] h-[80px] bg-[#F7F7F7] rounded-xl hidden md:flex">
             <Image
               src="/images/logo.png"
               alt="Logo"
               width={500}
               height={500}
-              className="w-auto h-auto py-2 px-5 object-cover"
+              className="w-auto h-16 mx-auto my-auto object-cover"
             />
           </div>
           <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm w-full">
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full h-full md:h-[80%] flex flex-col justify-between items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-0 md:pt-8 w-full md:w-[80%]">
+          <div className="grid grid-cols-3 gap-6 md:gap-8 pt-0 md:pt-8 w-full md:w-[80%]">
             {/* Product Column */}
             <div>
               <h4 className="font-semibold text-gray-900 mb-4 md:mb-6 text-base md:text-lg">
@@ -131,7 +131,7 @@ const Footer = () => {
 
           <div className="h-auto md:h-[68px] w-full border-t-2 border-gray-300 mt-8 md:mt-0">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4 md:gap-6 pt-6 md:pt-10 pb-4 md:pb-0">
-              <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+              <div className="md:flex flex-wrap justify-center gap-4 md:gap-8 hidden w-full">
                 {legalLinks.map((item, index) => (
                   <a
                     key={index}
@@ -144,8 +144,18 @@ const Footer = () => {
               </div>
 
               {/* Social Media Links */}
-              <div className="flex gap-3 md:gap-4">
-                {mediaLinks.map((item, index) => (
+              <div className="flex w-full justify-between md:justify-end items-center ">
+                <div className=" rounded-2xl h-16  w-auto bg-[#F7F7F7]/70 backdrop-blur-md md:hidden">
+                  <Image
+                    src="/images/logo.png"
+                    alt="Logo"
+                    width={128}
+                    height={66}
+                    className="h-20 w-28 pr-2 pb-5 px-1 object-contain"
+                  />
+                </div>
+               <div className="flex md:gap-4">
+                 {mediaLinks.map((item, index) => (
                   <a
                     key={index}
                     href={item.link}
@@ -156,6 +166,7 @@ const Footer = () => {
                     {item.icon}
                   </a>
                 ))}
+               </div>
               </div>
             </div>
           </div>

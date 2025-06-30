@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { TbPlant } from "react-icons/tb";
 
 function OneCard() {
   return (
-    <section className="h-auto w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:justify-evenly text-[#1B1919] py-10 lg:py-0 gap-8 lg:gap-0 mt-12">
+    <section className="h-auto w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:justify-evenly text-[#1B1919]  gap-8 lg:gap-0 my-12">
       {/* Text Content */}
       <div className="w-full lg:w-[50%] h-full order-2 lg:order-1">
         <div className="text-center lg:text-left max-w-lg mx-auto lg:mx-0">
@@ -16,7 +15,7 @@ function OneCard() {
             greener, one tree at a time!
           </p>
           <div className="flex items-center justify-center lg:justify-start w-full lg:w-[80%] bg-[#E8E8E8] px-4 lg:pl-6 py-3 lg:py-4 rounded-lg">
-            <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-8">
+            <div className="flex flex-row items-center gap-4 lg:gap-8">
               <span className="text-xl lg:text-2xl font-bold text-black flex gap-3 lg:gap-5 items-center">
                 <Image
                   src="/images/plant.png"
@@ -37,7 +36,7 @@ function OneCard() {
       </div>
 
       {/* Image Content */}
-      <div className="w-full lg:w-[50%] h-full order-1 lg:order-2">
+      <div className="hidden md:flex w-full lg:w-[50%] h-full order-1 lg:order-2">
         <Image
           src="/images/plant-illustration.png"
           alt="One Card Image"

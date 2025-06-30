@@ -4,22 +4,13 @@ import Image from "next/image";
 function Hero() {
   return (
     <section
-      className="h-screen w-screen bg-cover bg-center bg-no-repeat  overflow-hidden"
+      className="lg:h-screen h-[600px] w-screen bg-cover bg-center bg-no-repeat  overflow-hidden"
       aria-label="Hero banner"
       style={{ backgroundImage: `url('/images/Hero.png')` }}
     >
-      <div className="absolute top-[30px] left-[64px] rounded-2xl h-16 w-auto bg-[#F7F7F7]/70 backdrop-blur-md">
-        <Image
-          src="/images/logo.png"
-          alt="Logo"
-          width={128}
-          height={66}
-          className="h-20 w-28 pr-2 pb-5 px-1 object-contain"
-        />
-      </div>
 
-      <div className="absolute bottom-[110px] w-[58%] space-y-5  left-[64px] text-start text-white">
-        <h1 className="text-6xl font-bold  leading-tight">
+      <div className="absolute lg:bottom-[10%] top-[27%] md:top-auto  text-center   lg:w-[58%]  w-full px-3 lg:px-0 md:space-y-5 space-y-2  lg:left-[64px] lg:text-start text-white ">
+        <h1 className="md:text-6xl  text-3xl font-bold  md:leading-tight">
           Digital business cards for modern networking.
         </h1>
 
@@ -29,7 +20,7 @@ function Hero() {
         </button>
       </div>
 
-      <div className="">
+      <div className="hidden lg:flex">
         <div className="absolute h-[275px] w-[214px] bg-[#F7F7F7] bottom-[20%] right-[12%] rounded-xl z-10">
           <p className="p-4 text-black">Back Card</p>
         </div>
@@ -42,3 +33,4 @@ function Hero() {
 }
 
 export default Hero;
+
