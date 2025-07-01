@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function Card({ title, description, image }) {
   return (
-    <div className="bg-[#F7F7F7] shadow-md rounded-lg p-2 md:p-6 flex flex-col justify-between items-center h-auto w-full">
-      <div className="flex justify-center items-center flex-1 mb-6">
+    <div className="bg-[#F7F7F7] shadow-[0_4px_4px_rgba(27,25,25,0.15)] rounded-2xl p-2 md:p-6 flex flex-col justify-between items-center h-auto w-full">
+      <div className="flex justify-center items-center flex-1 md:mb-6">
         <div 
           className="w-28 h-28 md:w-44 md:h-44 bg-[#007BFF] rounded-full flex items-center justify-center overflow-hidden"
           style={{
@@ -26,7 +26,7 @@ function Card({ title, description, image }) {
         <h3 className="text-lg md:text-xl font-semibold text-center text-[#1B1919] ">
           {title}
         </h3>
-        <p className="text-[#515154] mt-2 text-center text-sm md:text-base pb-5">
+        <p className="text-[#515154] md:mt-2 mt-1 text-center text-sm md:text-base md:pb-5">
           {description}
         </p>
       </div>

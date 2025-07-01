@@ -75,7 +75,7 @@ function Brands() {
     { id: 2, logo: "/images/brand2.png" },
     { id: 3, logo: "/images/brand3.png" },
     { id: 4, logo: "/images/brand4.png" },
-    { id: 5, logo: "/images/brand5.png" },
+    { id: 6, logo: "/images/brand6.png" },
   ];
 
   useEffect(() => {

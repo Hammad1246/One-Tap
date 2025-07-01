@@ -4,19 +4,19 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 function PricingCard({ plan }) {
   return (
     <div
-      className={`relative bg-[#E8E8E8] rounded-2xl shadow-lg p-8 ${
-        plan.isBestPlan ? "ring-2 border-3 border-[#007BFF] md:scale-110 scale-90" : "scale-90 md:scale-100"
+      className={`relative bg-[#F7F7F7] rounded-2xl shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] p-5 md:p-8 ${
+        plan.isBestPlan ? " border-3 border-[#007BFF] md:scale-110 scale-90" : "scale-90 md:scale-100"
       }`}
     >
       {plan.isBestPlan && (
-        <div className="absolute -top-12.5 left-1/2 -translate-x-1/2 w-4/5">
-          <div className="mx-auto rounded-t-2xl border-3 border-[#007BFF] bg-gray-100 text-[#007BFF] font-bold text-xl text-center py-2">
+        <div className="absolute md:-top-12.5 -top-10.5 left-1/2 -translate-x-1/2 w-4/5">
+          <div className="mx-auto rounded-t-2xl border-3 border-[#007BFF] bg-gray-100 text-[#007BFF] font-bold text-xl text-center md:py-2 py-1">
             Best Deal !
           </div>
         </div>
       )}
 
-      <div className="text-left mb-8 border-b-1 border-[#515154] pb-5">
+      <div className="text-left md:mb-8 mb-5 border-b-1 border-[#515154] pb-5">
         <h3 className="text-xl font-semibold text-[#007BFF] mb-4">
           {plan.name}
         </h3>

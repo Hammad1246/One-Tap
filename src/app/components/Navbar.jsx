@@ -19,8 +19,9 @@ function Navbar() {
   };
 
   return (
-    <nav className="flex absolute top-10 lg:justify-end justify-start h-auto w-full gap-7  text-black">
-      <div className="absolute lg:top-[-10px] lg:left-[64px] top-[-5px] right-[24px] rounded-2xl lg:h-16 h-12 lg:w-32 w-24 bg-white backdrop-blur-md">
+    <nav className="flex absolute top-10 lg:justify-end justify-start h-auto w-full md:gap-7 gap-3  text-black">
+      <Link href={"/"}>
+      <div className="absolute lg:top-[-10px] lg:left-[64px] top-[-5px] right-[13px] rounded-2xl lg:h-16 h-12 lg:w-32 w-24 bg-[#F7F7F7]/70 backdrop-blur-md">
         <Image
           src="/images/logo.png"
           alt="Logo"
@@ -29,8 +30,9 @@ function Navbar() {
           className="lg:h-20 lg:w-28 h-16 w-24 pr-2 pb-5 px-1 object-contain"
         />
       </div>
+      </Link>
 
-      <div className="hidden lg:flex h-[42px] w-auto px-10 bg-white rounded-xl shadow">
+      <div className="hidden lg:flex h-[42px] w-auto px-10 bg-[#F7F7F7] rounded-xl  shadow-[0_4px_4px_rgba(27,25,25,0.15)]">
         <ul className="flex justify-evenly items-center h-full w-full space-x-10">
           <li>
             <Link href="/">Home</Link>
@@ -49,7 +51,7 @@ function Navbar() {
       </div>
 
       <div className="hidden lg:flex">
-        <div className="h-[42px] w-auto px-3 bg-white shadow rounded-xl flex justify-between items-center gap-2 mr-5">
+        <div className="h-[42px] w-auto px-3 bg-[#F7F7F7]  shadow-[0_4px_4px_rgba(27,25,25,0.15)] rounded-xl flex justify-between items-center gap-2 mr-5">
           <Link href= "/login">
            <button className="w-auto h-auto p-1.5 px-3 rounded-xl text-black text-sm cursor-pointer">
             <p>Log in</p>
@@ -66,18 +68,18 @@ function Navbar() {
 
         <button
         onClick={addToCart}
-         className="h-[42px] w-auto px-3 bg-white shadow rounded-xl flex justify-between items-center gap-2 mr-20 cursor-pointer ">
+         className="h-[42px] w-auto px-3 bg-white  shadow-[0_4px_4px_rgba(27,25,25,0.15)] rounded-xl flex justify-between items-center gap-2 mr-20 cursor-pointer ">
           <FiShoppingCart className="h-5 w-5" />
         </button>
       </div>
 
 
-<div className="lg:hidden flex justify-between items-center pl-5">
+<div className="lg:hidden flex justify-between items-center md:pl-5 ">
 
         <Menu as="div" className="relative inline-block text-left z-20">
           {({ open }) => (
             <>
-              <Menu.Button className="p-2 bg-white shadow rounded-xl flex items-center justify-center">
+              <Menu.Button className="p-2 bg-[#F7F7F7] shadow rounded-xl flex items-center justify-center">
                 {open ? (
                   <MdClose className="h-6 w-6 text-black" />
                 ) : (
@@ -85,7 +87,7 @@ function Navbar() {
                 )}
               </Menu.Button>
 
-              <Menu.Items className="absolute left-0 mt-2 w-48 origin-top-right bg-white divide-y divide-gray-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+              <Menu.Items className="absolute left-0 mt-2 w-48 origin-top-right bg-[#F7F7F7] divide-y divide-gray-300 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                 <div className="px-1 py-1">
                   <Menu.Item>
                     {({ active }) => (
@@ -154,8 +156,8 @@ function Navbar() {
                       <Link
                         href="/signup"
                         className={`${
-                          active ? "bg-gray-100 text-black" : "text-gray-900"
-                        } group flex w-full items-center px-2 py-2 text-sm`}
+                          active ? "bg-gray-100 text-black" : "text-gray-900 "
+                        } group flex w-full items-center px-2 py-2 text-sm `}
                       >
                         Sign up
                       </Link>
