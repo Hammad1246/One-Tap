@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { useState } from "react";
 import { FaRegCircleCheck } from "react-icons/fa6";
 
@@ -58,9 +58,11 @@ export default function CardSummary() {
           ))}
         </ul>
 
-        <button className="px-3 py-1.5 md:px-4 md:py-2 border rounded-md text-xs md:text-sm text-[#1B1919] shadow self-center lg:self-auto">
+       <Link href={"/shop"} className="self-center lg:self-auto">
+        <button className="px-3 py-1.5 md:px-4 md:py-2 hover:scale-105 transition-transform duration-300 cursor-pointer active:scale-105  border rounded-md text-xs md:text-sm text-[#1B1919] shadow self-center lg:self-auto">
           Learn more
         </button>
+       </Link>
       </div>
     </div>
   );

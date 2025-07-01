@@ -64,7 +64,7 @@ export default function LoginPage() {
             </div>
 
             <div className="flex items-center justify-between">
-              <label className="flex items-center gap-2 text-sm text-[#515154]">
+              <label className="flex items-center gap-2 text-sm text-[#515154] ">
                 <input
                   type="checkbox"
                   checked={rememberMe}

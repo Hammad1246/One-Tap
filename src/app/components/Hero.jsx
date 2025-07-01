@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -15,9 +16,11 @@ function Hero() {
         </h1>
 
         <p className="mb-10 text-xl">Share instantly. Stay connected.</p>
-        <button className="bg-[#F7F7F7] rounded-lg h-[41px] w-[120px] text-black hover:bg-white cursor-pointer" >
+       <Link href={"/shop"}>
+        <button className="bg-[#F7F7F7] hover:scale-105 rounded-lg h-[41px] w-[120px] text-black hover:bg-white cursor-pointer  transition-transform duration-300 active:scale-105 focus:scale-105" >
           Get Started
         </button>
+       </Link>
       </div>
 
       <div className="hidden lg:flex">
