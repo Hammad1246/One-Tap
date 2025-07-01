@@ -9,7 +9,7 @@ function Hero() {
       style={{ backgroundImage: `url('/images/Hero.png')` }}
     >
 
-      <div className="absolute lg:bottom-[10%] top-[29%] lg:top-auto  text-center lg:w-[58%]  w-full px-3 lg:px-0 md:space-y-5 space-y-2  lg:left-[64px] lg:text-start text-white ">
+      <div className="absolute lg:bottom-[10%] top-[29%] lg:top-auto  text-center   lg:w-[58%]  w-full px-3 lg:px-0 md:space-y-5 space-y-2  lg:left-[64px] lg:text-start text-white ">
         <h1 className="md:text-6xl  text-3xl !font-bold  md:leading-tight">
           Digital business cards for modern networking.
         </h1>
