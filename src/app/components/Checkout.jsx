@@ -69,14 +69,14 @@ const CheckoutPage = () => {
                 <div className="flex items-center gap-2 text-black">
                   <button
                     onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                    className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                    className="p-1 hover:bg-gray-100 bg-gray-100 md:bg-white cursor-pointer rounded-full transition-colors"
                   >
                     <Minus className="w-4 h-4" />
                   </button>
                   <span className="w-6 text-center">{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                    className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                    className="p-1 hover:bg-gray-100 bg-gray-100 md:bg-white cursor-pointer rounded-full transition-colors"
                   >
                     <Plus className="w-4 h-4" />
                   </button>

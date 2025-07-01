@@ -4,8 +4,8 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 function PricingCard({ plan }) {
   return (
     <div
-      className={`relative bg-[#E8E8E8] rounded-2xl shadow-lg p-8  ${
-        plan.isBestPlan ? "ring-2 border-3 border-[#007BFF] md:scale-110 scale-84" : "scale-84 md:scale-100"
+      className={`relative bg-[#E8E8E8] rounded-2xl shadow-lg p-8 ${
+        plan.isBestPlan ? "ring-2 border-3 border-[#007BFF] md:scale-110 scale-90" : "scale-90 md:scale-100"
       }`}
     >
       {plan.isBestPlan && (

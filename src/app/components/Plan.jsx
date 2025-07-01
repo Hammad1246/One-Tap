@@ -54,7 +54,7 @@ function Plan() {
 <section className="h-auto flex justify-center items-center md:mt-32 mt-6">
   <div className="max-w-7xl px-5 mx-auto sm:px-4 lg:px-8 h-full w-full">
     {/* Horizontal scroll wrapper */}
-    <div className="relative overflow-x-auto md:overflow-x-visible hide-scrollbar">
+    <div className="relative overflow-x-auto md:overflow-x-visible hide-scrollbar pt-5 md:pt-0">
       {/* Scrollable content */}
       <div
         className="

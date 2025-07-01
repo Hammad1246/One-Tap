@@ -20,7 +20,7 @@ function Navbar() {
 
   return (
     <nav className="flex absolute top-10 lg:justify-end justify-start h-auto w-full gap-7  text-black">
-      <div className="absolute lg:top-[-10px] lg:left-[64px] top-[-5px] right-[24px] rounded-2xl lg:h-16 h-12 lg:w-32 w-24 bg-[#F7F7F7]/70 backdrop-blur-md">
+      <div className="absolute lg:top-[-10px] lg:left-[64px] top-[-5px] right-[24px] rounded-2xl lg:h-16 h-12 lg:w-32 w-24 bg-white backdrop-blur-md">
         <Image
           src="/images/logo.png"
           alt="Logo"

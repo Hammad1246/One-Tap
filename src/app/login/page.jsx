@@ -4,30 +4,29 @@ import { FiUser, FiEye, FiEyeOff } from "react-icons/fi";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
-   const [rememberMe, setRememberMe] = useState(false);
-   const [userData, setUserData] = useState({
+  const [rememberMe, setRememberMe] = useState(false);
+  const [userData, setUserData] = useState({
     email: "",
-    password: ""
-   });
+    password: "",
+  });
   const router = useRouter();
 
-  const handelSubmit = (e)=>{
+  const handelSubmit = (e) => {
     e.preventDefault();
     router.push("/");
-
-  }
+  };
 
   return (
-    <div className="flex items-center justify-center min-h-screen min-w-screen bg-[#007BFF] "
-     style={{
-    backgroundImage: "url('/images/Star.png')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
+    <div
+      className="flex items-center justify-center min-h-screen min-w-screen bg-[#007BFF] "
+      style={{
+        backgroundImage: "url('/images/Star.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       <div className="flex justify-center items-center flex-col md:w-[100%] w-[90%]  gap-10 ">
         <div className="text-center text-white ">
@@ -42,7 +41,9 @@ export default function LoginPage() {
               placeholder="Demo@gmail.com"
               className="w-full px-4 py-3 rounded-md bg-[#F7F7F7]  text-black outline-none"
               value={userData.email}
-              onChange={(e) => setUserData({ ...userData, email: e.target.value })}
+              onChange={(e) =>
+                setUserData({ ...userData, email: e.target.value })
+              }
             />
 
             <div className="relative">
@@ -51,7 +52,9 @@ export default function LoginPage() {
                 placeholder="Password"
                 className="w-full px-10 py-3 rounded-md bg-[#F7F7F7]  text-black outline-none"
                 value={userData.password}
-                onChange={(e) => setUserData({ ...userData, password: e.target.value })}
+                onChange={(e) =>
+                  setUserData({ ...userData, password: e.target.value })
+                }
               />
               <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-[#515154]" />
               <button
@@ -59,7 +62,11 @@ export default function LoginPage() {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-3 top-1/2 -translate-y-1/2 text-[#515154] cursor-pointer"
               >
-                {showPassword ? <FiEyeOff className="p-1 text-2xl" /> : <FiEye className="p-1 text-2xl" />}
+                {showPassword ? (
+                  <FiEyeOff className="p-1 text-2xl" />
+                ) : (
+                  <FiEye className="p-1 text-2xl" />
+                )}
               </button>
             </div>
 
@@ -86,6 +93,17 @@ export default function LoginPage() {
             >
               Log In
             </button>
+            <div className="text-center mt-1">
+              <span className="text-sm text-[#515154]">
+                Don’t have an account?{" "}
+                <Link
+                  href="/signup"
+                  className="text-[#007BFF] hover:underline font-semibold"
+                >
+                  Sign Up
+                </Link>
+              </span>
+            </div>
           </form>
         </div>
       </div>

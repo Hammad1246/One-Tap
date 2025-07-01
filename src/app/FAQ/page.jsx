@@ -14,25 +14,25 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="flex md:min-h-screen h-auto pb-10 md:pb-0 w-screen flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-16  bg-[#F7F7F7] text-black pt-36 md:pt-10">
+    <div className="flex md:min-h-screen h-auto pb-10 md:pb-0 w-screen flex-col-reverse md:flex-row items-center justify-between md:gap-10 px-4 md:px-16  bg-[#F7F7F7] text-black pt-36 md:pt-10">
         
       <div className="md:w-1/2 w-full">
-        <p className="text-base mb-4 text-center md:text-left">
+        <p className="text-base mb-4 pt-2 md:pt-0 text-center md:text-left">
           Everything You Need To Know
         </p>
-        <div className="space-y-4 ">
+        <div className="space-y-4 mt-10 md:mt-0">
           {faqs.map((faq, index) => (
             <FAQItem key={index} question={faq.question} answer={faq.answer} defaultOpen={index === faqs.length - 1} />
           ))}
         </div>
       </div>
-      <div className="md:w-1/2 flex justify-center">
+      <div className="md:w-1/2 flex justify-center ">
         <Image
           src="/images/FAQs.png"
           alt="FAQ Illustration"
           className="w-[70%] h-[70%]"
           width={500}
-  height={500}
+          height={500}
         />
       </div>
     </div>
