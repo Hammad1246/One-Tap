@@ -23,7 +23,7 @@ const Sidebar = ({
   };
 
   return (
-    <div className=" w-64 bg-white rounded-r-2xl h-[82vh] fixed left-0 bottom-0 overflow-hidden">
+    <div className="hidden md:flex flex-col w-64 bg-white rounded-r-2xl h-[82vh] fixed left-0 bottom-0 overflow-hidden">
       <div className="p-6 h-full flex flex-col">
         {/* Type Filter */}
         <div className="mb-20">

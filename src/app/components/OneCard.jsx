@@ -3,11 +3,11 @@ import Image from "next/image";
 
 function OneCard() {
   return (
-    <section className="h-auto w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:justify-evenly text-[#1B1919]  gap-8 lg:gap-0 my-12">
+    <section className="h-auto w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:justify-evenly text-[#1B1919]  gap-8 lg:gap-0 md:my-12 mb-12 md:mb-0">
       {/* Text Content */}
       <div className="w-full lg:w-[50%] h-full order-2 lg:order-1">
         <div className="text-center lg:text-left max-w-lg mx-auto lg:mx-0">
-          <h2 className="text-3xl lg:text-4xl mb-3 lg:mb-4">
+          <h2 className="text-2xl lg:text-4xl mb-3 lg:mb-4">
             One Card = One Tree Planted
           </h2>
           <p className="text-[#515154] text-sm lg:text-base text-center lg:text-left mb-4 lg:mb-6">
@@ -29,7 +29,7 @@ function OneCard() {
               <span className="text-base !font-bold lg:text-md">Trees Planted So Far !</span>
             </div>
           </div>
-          <button className="mt-4 lg:mt-6 px-5 lg:px-6 py-2 lg:py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition text-sm lg:text-base">
+          <button className="mt-6 px-5 lg:px-6 py-3 bg-blue-500 text-white font-bold rounded-lg hover:bg-blue-600 transition text-sm lg:text-base">
             Buy & Plant a Tree
           </button>
         </div>

@@ -46,7 +46,7 @@ const CartSidebar = () => {
             <h2 className="text-xl font-semibold text-gray-900">Shopping Cart</h2>
             <button
               onClick={() => dispatch({ type: "TOGGLE_CART" })}
-              className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+              className="p-2 hover:bg-gray-100 bg-gray-100 md:bg-white rounded-full transition-colors"
             >
               <X className="w-5 h-5 text-black" />
             </button>

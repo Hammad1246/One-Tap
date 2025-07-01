@@ -51,9 +51,9 @@ function Process() {
   ];
 
   return (
-    <section className="md:h-[560px] h-auto  w-[90vw] md:w-[80vw] mx-auto flex flex-col items-center justify-center text-[#1B1919]">
+    <section className="md:h-[560px] h-auto  w-[90vw] md:w-[80vw] mx-auto flex flex-col items-center justify-center text-[#1B1919] mt-10 md:mt-0">
       <div className="h-auto w-full md:w-[80%] lg:w-[50%] text-center px-4 md:px-0">
-        <h2 className="text-3xl md:text-4xl mb-3 md:mb-4">Learn More About Process</h2>
+        <h2 className="text-2xl md:text-4xl mb-3 md:mb-4">Learn More About Process</h2>
         <p className="text-sm text-[#515154] w-full md:w-[90%] mx-auto leading-6 md:leading-7">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa.
@@ -102,7 +102,7 @@ function Process() {
                 </div>
 
                 {/* Content */}
-                <div className="space-y-3 md:space-y-4">
+                <div className="space-y-2 md:space-y-4">
                   <h3 className="text-lg md:text-xl font-semibold text-gray-900 transition-colors duration-300">
                     {step.stepHeader}
                   </h3>

@@ -27,7 +27,7 @@ const ProductDetailCard = () => {
 
   return (
     <div className="h-full w-full ">
-      <div className=" w-[80%] mt-32 mx-auto">
+      <div className=" w-[90%] md:w-[80%] md:mt-32 mt-24 mx-auto">
         <div className="mb-8">
           <SearchBar />
         </div>
