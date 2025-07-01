@@ -66,7 +66,7 @@ const Sidebar = ({
               onChange={(e) => setPriceRange(Number(e.target.value))}
               max={150}
               step={1}
-              className="w-full accent-[#007BFF] "
+              className="w-full accent-[#007BFF] cursor-pointer "
             />
             <div className="text-sm text-[#515154] !font-semibold ">
               Max. ${priceRange}.00
@@ -76,7 +76,7 @@ const Sidebar = ({
 
         {/* Apply Filters Button */}
         <button
-          className="w-[70%] mx-auto bg-[#007BFF] text-white text-sm font-medium py-2 rounded-md hover:bg-blue-600 mt-5"
+          className="w-[70%] mx-auto bg-[#007BFF] text-white text-sm font-medium py-2 rounded-md hover:bg-blue-600 mt-5 cursor-pointer"
           onClick={onApplyFilters}
         >
           + Apply filters

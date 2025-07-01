@@ -96,7 +96,7 @@ const ProductCard = ({ title, description, price, originalPrice, image, productI
 
         <button
         onClick={addToCart}
-         className="px-4 py-3 text-white text-sm font-medium bg-[#007BFF] rounded-lg hover:bg-blue-600">
+         className="px-4 py-3 text-white text-sm font-medium bg-[#007BFF] rounded-lg hover:bg-blue-600 cursor-pointer">
           Add to Cart
         </button>
       </div>
