@@ -23,7 +23,7 @@ const ProductPage = () => {
     <div className="bg-gray-100 min-h-screen min-w-screen  pt-10">
     <ProductDetailCard/>
 
-    <div className="md:w-[80%] w-[90%] mx-auto mt-16">
+    <div className="w-[90%] mx-auto mt-16">
         <ProductSection title="Similar Cards" products={typeAProducts} />
     </div>
 

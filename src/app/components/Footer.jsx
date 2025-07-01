@@ -37,7 +37,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="min-h-[550px] md:h-[550px] w-screen bg-[#E8E8E8] flex justify-center items-center pt-10 md:pt-0 mt-10">
+    <footer className="min-h-[550px] md:h-[550px] w-screen bg-[#E8E8E8] flex justify-center items-center pt-10 md:pt-0 ">
       <div className="w-[90%] h-full md:h-[80%] space-y-10 md:space-y-0 md:space-x-10 flex flex-col md:flex-row">
         <div className="w-full md:w-[35%] h-full flex flex-col justify-between items-start space-y-8 md:space-y-0">
           <div className="w-[160px] h-[80px] bg-[#F7F7F7] rounded-xl hidden md:flex">

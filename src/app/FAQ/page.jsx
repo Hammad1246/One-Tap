@@ -14,7 +14,7 @@ const FAQ = () => {
   ];
 
   return (
-    <div className="flex md:min-h-screen h-auto w-screen flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-16  bg-[#F7F7F7] text-black pt-36 md:pt-10">
+    <div className="flex md:min-h-screen h-auto pb-10 md:pb-0 w-screen flex-col-reverse md:flex-row items-center justify-between gap-10 px-4 md:px-16  bg-[#F7F7F7] text-black pt-36 md:pt-10">
         
       <div className="md:w-1/2 w-full">
         <p className="text-base mb-4 text-center md:text-left">

@@ -14,7 +14,7 @@ export default function CardSummary() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="h-auto md:py-12 py-5 bg-gradient-to-b from-[#F7F7F7] to-[#91a5ff] flex flex-col md:flex-row-reverse lg:flex-row items-center justify-center gap-8 lg:gap-16">
+    <div className="h-auto md:py-12 py-6 bg-gradient-to-b from-[#F7F7F7] to-[#91a5ff] flex flex-col md:flex-row-reverse lg:flex-row items-center justify-center gap-5 lg:gap-16">
       {/* Left Side - Card Display */}
       <div className="flex flex-col justify-center items-center space-y-4 lg:space-y-6 order-2 lg:order-1">
         {/* Card */}
@@ -29,7 +29,7 @@ export default function CardSummary() {
           {cards.map((_, i) => (
             <button
               key={i}
-              className={`w-3 h-3 md:w-5 md:h-5 rounded-full ${cards[i].color} ${
+              className={`w-4 h-4 md:w-5 md:h-5 rounded-full ${cards[i].color} ${
                 activeIndex === i ? "opacity-100 scale-120 border-3 border-white" : "opacity-80"
               } transition-all`}
               onClick={() => setActiveIndex(i)}

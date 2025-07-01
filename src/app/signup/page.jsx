@@ -58,7 +58,7 @@ function Signup() {
                   onClick={() => setShowPassword(!showPassword)}
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-[#515154] cursor-pointer"
                 >
-                  {showPassword ? <FiEyeOff /> : <FiEye />}
+                  {showPassword ? <FiEyeOff className="p-1 text-2xl" /> : <FiEye className="p-1 text-2xl" />}
                 </button>
               </div>
 

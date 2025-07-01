@@ -31,10 +31,10 @@ function Features() {
   ]);
 
   return (
-    <section className="h-auto md:my-10 my-5 flex flex-col justify-center lg:justify-evenly items-center bg-[#F7F7F7] ">
+    <section className="h-auto md:my-10 my-6 flex flex-col justify-center lg:justify-evenly items-center bg-[#F7F7F7] ">
       <div className="flex flex-col items-center justify-center text-center mb-8 lg:mb-0 space-y-1 w-full lg:w-auto">
         <h2 className="text-black text-2xl md:text-3xl">Overview of Features</h2>
-        <p className="text-black text-sm md:text-base">
+        <p className="text-black text-sm md:text-base w-[50%]">
           Provide an overview of main features of this service
         </p>
       </div>

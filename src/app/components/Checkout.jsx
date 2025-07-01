@@ -32,7 +32,7 @@ const CheckoutPage = () => {
   const total = subtotal - discount + deliveryFee;
 
   return (
-    <div className="min-h-screen  bg-gray-100 p-6 pt-32">
+    <div className="h-auto w-[90%] mx-auto bg-gray-100  pt-32">
       <h1 className="text-2xl font-bold mb-6 text-black text-left w-full  ">Your cart</h1>
 
       {items.length === 0 ? (

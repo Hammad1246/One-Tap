@@ -53,7 +53,7 @@ const Index = () => {
         setPriceRange={setPriceRange}
         onApplyFilters={handleApplyFilters}
       />  
-      <main className="md:ml-64 p-6 pt-20">
+      <main className="md:ml-64 p-6 pt-16">
         <div className="max-w-6xl mx-auto pt-20">
           <SearchBar  search={search} setSearch={setSearch} />
           <ProductSection title="Type A Cards" products={filterProducts(typeAProducts)} />

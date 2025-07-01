@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function OneCard() {
   return (
-    <section className="h-auto w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:justify-evenly text-[#1B1919]  gap-8 lg:gap-0 md:my-12 mb-12 md:mb-0">
+    <section className="h-auto w-[90vw] mx-auto flex flex-col lg:flex-row items-center justify-between lg:justify-evenly text-[#1B1919]  gap-8 lg:gap-0 md:my-12 ">
       {/* Text Content */}
       <div className="w-full lg:w-[50%] h-full order-2 lg:order-1">
         <div className="text-center lg:text-left max-w-lg mx-auto lg:mx-0">
