@@ -4,12 +4,12 @@ import Link from "next/link";
 function Hero() {
   return (
     <section
-      className="lg:h-screen h-[600px] w-screen bg-cover bg-center bg-no-repeat  overflow-hidden"
+      className="relative lg:h-screen min-h-[600px] w-screen bg-cover bg-center bg-no-repeat  overflow-hidden"
       aria-label="Hero banner"
       style={{ backgroundImage: `url('/images/Hero.png')` }}
     >
 
-      <div className="absolute lg:bottom-[15%] top-[27%] lg:top-auto  lg:w-[58%]  w-full px-3 lg:px-0 md:space-y-5 space-y-2  lg:left-[64px] text-start text-white ">
+      <div className="absolute lg:bottom-[15%] top-[40%] lg:top-auto  lg:w-[58%]  w-full px-3 lg:px-0 md:space-y-5 space-y-2  lg:left-[64px] text-start text-white ">
         <h1 className="md:text-6xl  text-3xl !font-bold  md:leading-tight  text-[#F7F7F7]">
           Digital Business Cards For Modern Networking.
         </h1>
