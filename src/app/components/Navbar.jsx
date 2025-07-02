@@ -12,7 +12,9 @@ import { Menu } from "@headlessui/react";
 
 function Navbar() {
 
-   const { dispatch } = useCart();
+   const {state, dispatch } = useCart();
+
+   const itemCount = state.items.length;
 
      const addToCart = () => {
     dispatch({ type: "TOGGLE_CART" });
@@ -66,11 +68,24 @@ function Navbar() {
          
         </div>
 
-        <button
+        {/* <button
         onClick={addToCart}
          className="h-[42px] w-auto px-3 bg-white  shadow-[0_4px_4px_rgba(27,25,25,0.15)] rounded-xl flex justify-between items-center gap-2 mr-20 cursor-pointer ">
           <FiShoppingCart className="h-5 w-5" />
-        </button>
+        </button> */}
+        <button
+  onClick={addToCart}
+  className="relative h-[42px] w-auto px-3 bg-white shadow-[0_4px_4px_rgba(27,25,25,0.15)] rounded-xl flex justify-between items-center gap-2 mr-20 cursor-pointer"
+>
+  <FiShoppingCart className="h-5 w-5" />
+  
+  {itemCount > 0 && (
+    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
+      {itemCount}
+    </span>
+  )}
+</button>
+
       </div>
 
 
@@ -165,15 +180,21 @@ function Navbar() {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <button
-                        onClick={addToCart}
-                        className={`${
-                          active ? "bg-gray-100 text-black" : "text-gray-900"
-                        } group flex w-full items-center px-2 py-2 text-sm`}
-                      >
-                        <FiShoppingCart className="h-5 w-5 mr-2" />
-                        Cart
-                      </button>
+                     <button
+  onClick={addToCart}
+  className={`${
+    active ? "bg-gray-100 text-black" : "text-gray-900"
+  } group flex w-full items-center px-2 py-2 text-sm relative`}
+>
+  <FiShoppingCart className="h-5 w-5 mr-2" />
+  Cart
+  {itemCount > 0 && (
+    <span className="absolute top-1 right-2 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
+      {itemCount}
+    </span>
+  )}
+</button>
+
                     )}
                   </Menu.Item>
                 </div>
