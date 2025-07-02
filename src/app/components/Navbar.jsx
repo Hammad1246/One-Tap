@@ -178,7 +178,7 @@ function Navbar() {
                         <FiShoppingCart className="h-5 w-5 mr-2" />
                         Cart
                         {itemCount > 0 && (
-                          <span className="absolute top-1 right-2 bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
+                          <span className="absolute top-1 right-2 bg-blue-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full">
                             {itemCount}
                           </span>
                         )}
